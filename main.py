@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 import base64
 import json
 import requests
