@@ -19,7 +19,7 @@ def eqwid_pochta_request():
         secret_token = 'secret_3fDhxvXSVcryGQr971zbdSD5iWpmfnk2'
         store_id = '21125130'
         # Получение данных о заказе
-        url: str = "https://app.ecwid.com/api/v3/" + store_id + "/orders/" + id_str + "?token=" + secret_token
+        url = "https://app.ecwid.com/api/v3/" + store_id + "/orders/" + id_str + "?token=" + secret_token
         r = requests.get(url)
         req_data = r.json()
         # Нормализация адреса
