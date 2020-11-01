@@ -64,7 +64,7 @@ def eqwid_pochta_request():
         room_to = dict_address['room'] # Квартира
         street_to = dict_address['street']  # Улица
         surname = all_name['lastName'] # Фамилия
-        tel_address = all_name['phone'] # Телефон
+       # tel_address = all_name['phone'] # Телефон
         new_order = [
             {
                 "address-type-to": address_type_to,
@@ -82,7 +82,7 @@ def eqwid_pochta_request():
                 "room-to": room_to,
                 "street-to": street_to,
                 "surname": surname,
-                "tel-address": tel_address
+                "tel-address": "777777"
             }
         ]
         protocol = "https://"
@@ -91,10 +91,10 @@ def eqwid_pochta_request():
         url = protocol + host + path
         # Отправка на Почту России
         response = requests.put(url, headers=request_headers, data=json.dumps(new_order))
-        return 'Response: {}'.format(response.text)
-    return "Недопустипый запрос"
+        return '200'
+    return "Приложение для отправки почты"
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host= '0.0.0.0', port=8995)
 
