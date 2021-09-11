@@ -15,9 +15,9 @@ def eqwid_pochta_request():
         id = r['entityId']
         id_str = str(id)
         # Данные ecwid
-        public_token = 'public_brxHKj2cqjivpDFkvtsBr1A4HXaDH5Em'
-        secret_token = 'secret_3fDhxvXSVcryGQr971zbdSD5iWpmfnk2'
-        store_id = '21125130'
+        public_token = 'public_********************'
+        secret_token = 'secret_********************'
+        store_id = '*********'
         # Получение данных о заказе
         url = "https://app.ecwid.com/api/v3/" + store_id + "/orders/" + id_str + "?token=" + secret_token
         r = requests.get(url)
